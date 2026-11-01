@@ -14,5 +14,12 @@
 
 int	conv_s(va_list *ap)
 {
-	return (0);
+	int		count;
+	char	*str;
+
+	count = 0;
+	str = va_arg(*ap, char *);
+	while (*str)
+		count += ft_putchar(*str++);
+	return (count);
 }
