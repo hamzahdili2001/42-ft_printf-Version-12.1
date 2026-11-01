@@ -6,7 +6,7 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 16:14:29 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/01 14:01:15 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/01 17:15:30 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,12 @@ typedef struct s_conv
 	int		(*f)(va_list *);
 }			t_conv;
 
+size_t		ft_strlen(char *str);
 int			ft_printf(const char *fmt, ...);
 int			dispatch(char spec, va_list *ap);
 int			ft_putchar(int c);
+int			ft_putstr(char *str);
+int			ft_putnbr_base(unsigned long n, char *base, unsigned int base_len);
 int			conv_c(va_list *ap);
 int			conv_s(va_list *ap);
 int			conv_p(va_list *ap);

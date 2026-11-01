@@ -6,7 +6,7 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 13:59:59 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/01 14:37:20 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/01 17:27:46 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	main(void)
 {
 	char	*str;
 
-	str = "this is an str test";
-	printf("%d\n", ft_printf("%s\n", str));
-	printf("%d\n", printf("%s\n", str));
+	str = "test";
+	printf("%d\n", ft_printf("%d%%%d\n", 1, 2));
+	printf("%d\n", printf("%d%%%d\n", 1, 2));
 	return (0);
 }

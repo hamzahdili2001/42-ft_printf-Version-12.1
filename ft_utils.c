@@ -6,14 +6,44 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 12:51:38 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/01 12:51:38 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/01 16:09:40 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+size_t	ft_strlen(char *str)
+{
+	size_t	len;
+
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
+}
+
 int	ft_putchar(int c)
 {
-	write(1, &c, 1);
-	return (1);
+	return ((int)write(1, &c, 1));
+}
+
+int	ft_putstr(char *str)
+{
+	int	count;
+
+	count = 0;
+	while (str[count])
+		count += ft_putchar(str[count]);
+	return (count);
+}
+
+int	ft_putnbr_base(unsigned long n, char *base, unsigned int base_len)
+{
+	int	count;
+
+	count = 0;
+	if (n >= base_len)
+		count += ft_putnbr_base(n / base_len, base, base_len);
+	count += ft_putchar(base[n % base_len]);
+	return (count);
 }
