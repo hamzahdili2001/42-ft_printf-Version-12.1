@@ -12,10 +12,11 @@
 
 #include "ft_printf.h"
 
-int	conv_s(va_list *ap)
+int	conv_s(va_list *ap, t_flag *flags)
 {
 	char	*str;
 
+	(void)flags;
 	str = va_arg(*ap, char *);
 	if (!str)
 		return (ft_putstr("(null)"));

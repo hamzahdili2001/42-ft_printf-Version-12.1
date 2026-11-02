@@ -6,7 +6,7 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 10:34:33 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/02 10:20:52 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/02 17:15:52 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -23,7 +23,7 @@ int	dispatch(char spec, va_list *ap, t_flag *flags)
 	while (p->spec)
 	{
 		if (p->spec == spec)
-			return (p->f(ap));
+			return (p->f(ap, flags));
 		p++;
 	}
 	return (-1);

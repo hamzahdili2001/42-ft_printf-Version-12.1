@@ -6,7 +6,7 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 13:59:59 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/02 11:18:48 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/02 15:43:01 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 int	main(void)
 {
-	char	*str;
+	int	t;
 
-	str = NULL;
-	printf("%d\n", ft_printf("%p\n", str));
-	printf("%d\n", printf("%p\n", str));
+	t = 2140;
+	printf("%d\n", ft_printf("%d\n", t));
+	ft_printf("%d\n", printf("%d\n", t));
 	return (0);
 }

@@ -12,11 +12,12 @@
 
 #include "ft_printf.h"
 
-int	conv_p(va_list *ap)
+int	conv_p(va_list *ap, t_flag *flags)
 {
 	void			*p;
 	unsigned long	addr;
 
+	(void)flags;
 	p = va_arg(*ap, void *);
 	if (!p)
 		return (ft_putstr("(nil)"));

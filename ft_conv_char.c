@@ -13,10 +13,11 @@
 #include "ft_printf.h"
 #include <stdarg.h>
 
-int	conv_c(va_list *ap)
+int	conv_c(va_list *ap, t_flag *flags)
 {
 	int	c;
 
+	(void)flags;
 	c = va_arg(*ap, int);
 	ft_putchar(c);
 	return (1);

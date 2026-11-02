@@ -12,8 +12,9 @@
 
 #include "ft_printf.h"
 
-int	conv_pct(va_list *ap)
+int	conv_pct(va_list *ap, t_flag *flags)
 {
 	(void)ap;
+	(void)flags;
 	return (ft_putchar('%'));
 }
