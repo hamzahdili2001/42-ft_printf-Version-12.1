@@ -11,13 +11,14 @@
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-int	dispatch(char spec, va_list *ap)
+int	dispatch(char spec, va_list *ap, t_flag *flags)
 {
 	static const t_conv	table[] = {{'c', conv_c}, {'s', conv_s}, {'p', conv_p},
-	{'d', conv_d}, {'i', conv_d}, {'u', conv_u}, {'x', conv_x}, {'X',
-		conv_upx}, {'%', conv_pct}, {0, NULL}};
+			{'d', conv_d}, {'i', conv_d}, {'u', conv_u}, {'x', conv_x}, {'X',
+			conv_upx}, {'%', conv_pct}, {0, NULL}};
 	const t_conv		*p;
 
+	(void)flags;
 	p = table;
 	while (p->spec)
 	{
