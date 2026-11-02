@@ -6,19 +6,20 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 12:51:38 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/01 16:09:40 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/02 11:22:45 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+/*
 size_t	ft_strlen(char *str)
 {
 	if (*str == '\0')
 		return (0);
 	return (1 + ft_strlen(str + 1));
 }
-
+*/
 int	ft_putchar(int c)
 {
 	return ((int)write(1, &c, 1));
