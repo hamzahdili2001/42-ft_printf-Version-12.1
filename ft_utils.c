@@ -14,12 +14,9 @@
 
 size_t	ft_strlen(char *str)
 {
-	size_t	len;
-
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
+	if (*str == '\0')
+		return (0);
+	return (1 + ft_strlen(str + 1));
 }
 
 int	ft_putchar(int c)
