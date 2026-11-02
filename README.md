@@ -1,2 +1,1 @@
-# 42-ft_printf-Version-12.1
-# 42-ft_printf-Version-12.1
+*This project has been created as part of the 42 curriculum by hhdili.*
