@@ -12,11 +12,10 @@
 
 #include "ft_printf.h"
 
-int	conv_x(va_list *ap, t_flag *flags)
+int	conv_x(va_list *ap)
 {
 	unsigned int	n;
 
-	(void)flags;
 	n = va_arg(*ap, unsigned int);
 	return (ft_putnbr_base(n, "0123456789abcdef", 16));
 }

@@ -12,13 +12,12 @@
 
 #include "ft_printf.h"
 
-int	conv_d(va_list *ap, t_flag *flags)
+int	conv_d(va_list *ap)
 {
 	int		n;
 	int		count;
 	long	mag;
 
-	(void)flags;
 	n = va_arg(*ap, int);
 	mag = 0;
 	count = 0;

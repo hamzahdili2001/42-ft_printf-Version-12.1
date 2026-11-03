@@ -12,8 +12,7 @@
 
 #include "ft_printf.h"
 
-int	conv_u(va_list *ap, t_flag *flags)
+int	conv_u(va_list *ap)
 {
-	(void)flags;
 	return (ft_putnbr_base(va_arg(*ap, unsigned int), "0123456789", 10));
 }

@@ -6,7 +6,7 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 16:23:29 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/02 14:20:51 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/03 11:02:20 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	ft_printf(const char *fmt, ...)
 	int		total;
 	int		n;
 	va_list	args;
-	t_flag	flags;
 
 	total = 0;
 	va_start(args, fmt);
@@ -29,9 +28,7 @@ int	ft_printf(const char *fmt, ...)
 			fmt++;
 			if (!*fmt)
 				break ;
-			init_flags(&flags);
-			fmt = parse_flags(fmt, &flags, &args);
-			n = dispatch(*fmt, &args, &flags);
+			n = dispatch(*fmt, &args);
 			if (n < 0)
 				return (va_end(args), -1);
 			total += n;
