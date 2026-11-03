@@ -6,12 +6,11 @@
 /*   By: hhdili <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 16:23:29 by hhdili            #+#    #+#             */
-/*   Updated: 2026/11/03 11:02:20 by hhdili           ###   ########.fr       */
+/*   Updated: 2026/11/03 11:24:37 by hhdili           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int	ft_printf(const char *fmt, ...)
 {

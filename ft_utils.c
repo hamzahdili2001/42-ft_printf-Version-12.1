@@ -12,14 +12,6 @@
 
 #include "ft_printf.h"
 
-/*
-size_t	ft_strlen(char *str)
-{
-	if (*str == '\0')
-		return (0);
-	return (1 + ft_strlen(str + 1));
-}
-*/
 int	ft_putchar(int c)
 {
 	return ((int)write(1, &c, 1));
