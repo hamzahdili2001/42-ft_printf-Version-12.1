@@ -158,4 +158,3 @@ Each entry maps a conversion specifier (`'c'`, `'s'`, `'p'`, `'d'`, `'i'`, `'u'`
 
 `ft_printf` is a complete, norm‑compliant implementation of the mandatory part of the 42 `ft_printf` project.  
 It correctly handles all required conversions, returns the right character count, and is ready to be added to the author’s `libft` for future projects.
-```
